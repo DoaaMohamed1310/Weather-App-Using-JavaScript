@@ -39,26 +39,29 @@ function setWeatherInPage(weatherDate){
     weatherResult.style.display="block"
     temp.innerHTML=`${Math.round(weatherDate.main.temp - 273.15)}°C`
     tempText.innerHTML=`${weatherDate.weather[0].description}`
-    switch (weatherDate.weather[0].main) {
-        case "Clouds":
-            imageWeather.src="../image/cloud.png"
-            break;
-        case "Clear":
-            imageWeather.src="../image/clear.png"
-            break;
-        case "Rain":
-            imageWeather.src="../image/rain.png"
-            break;
-        case "Mist":
-            imageWeather.src="../image/mist.png"
-            break;
-        case "Snow":
-            imageWeather.src="../image/snow.png"
-            break;
-        default:
-            imageWeather.src="../image/cloud.png"
-            break;
-    }
+    let icon=weatherDate.weather[0].icon
+    let imgIcon=`https://openweathermap.org/img/wn/${icon}.png`
+    imageWeather.src=`${imgIcon}`
+    // switch (weatherDate.weather[0].main) {
+    //     case "Clouds":
+    //         imageWeather.src="../image/cloud.png"
+    //         break;
+    //     case "Clear":
+    //         imageWeather.src="../image/clear.png"
+    //         break;
+    //     case "Rain":
+    //         imageWeather.src="../image/rain.png"
+    //         break;
+    //     case "Mist":
+    //         imageWeather.src="../image/mist.png"
+    //         break;
+    //     case "Snow":
+    //         imageWeather.src="../image/snow.png"
+    //         break;
+    //     default:
+    //         imageWeather.src="../image/cloud.png"
+    //         break;
+    // }
 }
 
 function createElement(hoursElement) {
