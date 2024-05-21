@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Weather App</title>
+        <!-- file css -->
+        <link rel="stylesheet" href="style/style.css">
+        <!-- render element normaly -->
+        <link rel="stylesheet" href="style/normalize.css">
+        <!-- font awesome libaray -->
+        <link rel="stylesheet" href="style/all.min.css">
+        <!-- line icon -->
+        <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="weather">
+            <form action="" >
+                <label>Weather App</label>
+                <input type="text" placeholder="Enter City Name" class="input-weather">
+                <button type="submit" class="btn-weather"><i class="fa fa-search"></i></button>
+            </form>
+            <div class="result-weather">
+                <div class="weather-content">
+                    <img  alt="weather-image">
+                    <div class="weather-text">
+                        <h3></h3>
+                        <p><sup>°C</sup></p>
+                    </div>
+
+                </div>
+                <div class="weather-houres">
+                </div>
+            </div>
+            <div class="not-found">
+                <img src="image/404.png" alt="error">
+                <p>Oops! Location not found</p>
+            </div>
+        </div>
+        <script src="js/main.js" type="module"></script>
+    </body>
+</html>
